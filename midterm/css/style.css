@@ -1,0 +1,231 @@
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #aad4cf;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+/* Website container */
+.container {
+    width: 71%;
+    max-width: 760px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #d4e9e7;
+}
+
+/* Header image with title on top */
+header {
+    position: relative;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: clamp(30px, 4.2vw, 48px);
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Navigation menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav li + li {
+    border-left: 1px solid #8ba9a6;
+}
+
+nav a {
+    display: block;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: clamp(12px, 1.6vw, 16px);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 7px 5px 0;
+}
+
+h2 {
+    margin: 10px 0 8px;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: normal;
+}
+
+/* Article image floats left */
+.article-image {
+    float: left;
+    width: 25%;
+    height: auto;
+    margin: 0 10px 5px 0;
+}
+
+/* Article text wraps around image */
+article p {
+    margin: 0;
+    font-size: clamp(8px, 1vw, 12px);
+    line-height: 1.25;
+}
+
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Facts section */
+.facts {
+    margin-top: 12px;
+}
+
+.facts ul {
+    margin: 0 0 14px;
+    padding-left: 10px;
+    font-size: clamp(8px, 1vw, 12px);
+    line-height: 1.15;
+}
+
+/* Contact section */
+#contact h2 {
+    margin-bottom: 5px;
+}
+
+form {
+    border: 1px solid #778e8b;
+    padding: 14px 8px 9px;
+}
+
+/* Form inputs */
+.form-group {
+    margin-bottom: 9px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: clamp(9px, 1.1vw, 12px);
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    border-radius: 0;
+    background-color: white;
+    font-family: inherit;
+}
+
+.form-group input {
+    height: 16px;
+}
+
+.form-group textarea {
+    height: 51px;
+    resize: vertical;
+}
+
+/* Radio button choices */
+fieldset {
+    margin: 0 0 8px;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+fieldset label {
+    font-size: 9px;
+}
+
+fieldset input {
+    vertical-align: middle;
+    margin: 0 6px 0 2px;
+}
+
+/* Send button */
+button {
+    padding: 5px 6px;
+    border: 1px solid #778e8b;
+    background: transparent;
+    font-size: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 16px 16px 15px;
+    text-align: right;
+}
+
+footer p {
+    margin: 0;
+    font-size: 8px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    article p,
+    .facts ul {
+        font-size: 11px;
+    }
+
+    .article-image {
+        width: 30%;
+    }
+
+    .form-group label,
+    fieldset label,
+    legend {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        height: 28px;
+    }
+}
